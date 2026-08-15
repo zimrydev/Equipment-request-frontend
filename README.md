@@ -10,4 +10,5 @@ This repository contains the frontend part of the project
 - (React / Bootstrap – if decided)
 
 ## Status
- Frontend development will start soon.
+ Finished the entire work
+ 
