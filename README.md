@@ -53,7 +53,7 @@ The backend was developed by another team member using Java/Spring Boot. This re
 
 The frontend contains dedicated interfaces for:
 
-*Student
+* Student
 
 * Instructor/Staff
 
