@@ -37,87 +37,87 @@ The backend was developed by another team member using Java/Spring Boot. This re
 
 **Authentication**
 
-Login and student signup interfaces
+* Login and student signup interfaces
 
-Password strength and confirmation validation
+* Password strength and confirmation validation
 
-Forgot/reset password flows
+* Forgot/reset password flows
 
-Email verification page
+* Email verification page
 
-JWT token storage and authenticated API requests
+* JWT token storage and authenticated API requests
 
-Role-based navigation
+* Role-based navigation
 
 ## Role-based Interfaces
 
 The frontend contains dedicated interfaces for:
 
-Student
+*Student
 
-Instructor/Staff
+* Instructor/Staff
 
-Lecturer
+* Lecturer
 
-Technical Officer
+* Technical Officer
 
-Head of Department (HOD)
+* Head of Department (HOD)
 
-Administrator
+* Administrator
 
 ## Equipment Request Workflow
 
 Frontend screens support workflows for:
 
-Creating equipment requests
+* Creating equipment requests
 
-Viewing current requests
+* Viewing current requests
 
-Request history
+* Request history
 
-Lecturer approval/rejection
+* Lecturer approval/rejection
 
-Technical Officer issue/wait/return verification
+* Technical Officer issue/wait/return verification
 
-Student acceptance and return
+* Student acceptance and return
 
-Purchase request submission and approval
+* Purchase request submission and approval
 
-Inventory and laboratory management
+* Inventory and laboratory management
 
 ## Dashboards and Reporting
 
-Role-specific dashboards
+* Role-specific dashboards
 
-Request statistics
+* Request statistics
 
-Interactive charts using Recharts
+* Interactive charts using Recharts
 
-HOD reports
+* HOD reports
 
-Lab-level reporting
+* Lab-level reporting
 
-Printable PDF-style HOD lab reports
+* Printable PDF-style HOD lab reports
 
 ## Reusable Components
 
 Examples include:
 
-Navbar
+* Navbar
 
-Sidebar
+* Sidebar
 
-Topbar
+* Topbar
 
-Notification Bell
+* Notification Bell
 
-Summary Cards
+* Summary Cards
 
-Feedback Modal
+* Feedback Modal
 
-Password/reset modals
+* Password/reset modals
 
-Signup overlay
+* Signup overlay
 
 ## Frontend Architecture
 
@@ -144,15 +144,15 @@ src/
 
 The frontend uses a centralized API wrapper to:
 
-Build API requests.
+1. Build API requests.
 
-Attach the JWT token when available.
+2. Attach the JWT token when available.
 
-Parse JSON/text responses.
+3. Parse JSON/text responses.
 
-Handle HTTP errors.
+4. Handle HTTP errors.
 
-Expose grouped API functions for authentication, notifications, student requests, lecturer approvals, Technical Officer workflows, HOD functions, and administration.
+5. Expose grouped API functions for authentication, notifications, student requests, lecturer approvals, Technical Officer workflows, HOD functions, and administration.
 
 The backend API is not included in this frontend-only repository.
 
@@ -160,23 +160,23 @@ The backend API is not included in this frontend-only repository.
 
 I was responsible primarily for the frontend development. My contribution included:
 
-Implementing React pages and reusable components.
+* Implementing React pages and reusable components.
 
-Building role-specific dashboards and navigation.
+* Building role-specific dashboards and navigation.
 
-Implementing frontend forms and validation.
+* Implementing frontend forms and validation.
 
-Integrating frontend screens with backend REST endpoints.
+* Integrating frontend screens with backend REST endpoints.
 
-Handling JWT tokens and authenticated API requests on the client side.
+* Handling JWT tokens and authenticated API requests on the client side.
 
-Building request, approval, issue, return, purchase, inventory, notification, and reporting interfaces.
+* Building request, approval, issue, return, purchase, inventory, notification, and reporting interfaces.
 
-Implementing interactive data visualizations with Recharts.
+* Implementing interactive data visualizations with Recharts.
 
-Styling the application with CSS and responsive layouts.
+* Styling the application with CSS and responsive layouts.
 
-Debugging frontend functionality and improving user flows.
+* Debugging frontend functionality and improving user flows.
 
 ## Important Note
 
