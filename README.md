@@ -7,7 +7,7 @@ This repository contains the frontend part of the project
 - HTML
 - CSS
 - JavaScript
-- (React / Bootstrap – if decided)
+- (React / Bootstrap)
 
 ## Status
  Finished the entire work
