@@ -3,6 +3,7 @@
 A role-based web application developed as a university group project to manage equipment requests, approvals, issuing, returning, purchasing, inventory, notifications, and reporting.
 
 **My role:** Frontend Developer
+
 **Primary contribution:** React.js frontend, JavaScript, HTML5, CSS3, reusable UI components, API integration, dashboards, and frontend workflow implementation.
 
 ## Technologies
