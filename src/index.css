@@ -1,0 +1,18 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* No global background here — each page's own CSS sets its background.
+   home.css  → #050e24 dark navy  (public home + login pages)
+   hodTheme.css / lecturerTheme.css etc → #f1f5f9 light (dashboard pages) */
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}

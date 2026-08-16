@@ -1,0 +1,422 @@
+/* ================================================================
+   ERMS Lecturer Theme — University of Jaffna · Faculty of Engineering
+   ================================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* ── CSS Variables (all pages use --lt-*) ── */
+:root {
+  --lt-blue:        #2563eb;
+  --lt-blue-h:      #1d4ed8;
+  --lt-blue-pale:   #eff6ff;
+  --lt-blue-bd:     #bfdbfe;
+  --lt-green:       #16a34a;
+  --lt-green-pale:  #f0fdf4;
+  --lt-green-bd:    #bbf7d0;
+  --lt-amber:       #d97706;
+  --lt-amber-pale:  #fffbeb;
+  --lt-amber-bd:    #fde68a;
+  --lt-red:         #dc2626;
+  --lt-red-pale:    #fef2f2;
+  --lt-red-bd:      #fecaca;
+  --lt-purple:      #7c3aed;
+  --lt-purple-pale: #f5f3ff;
+  --lt-purple-bd:   #c4b5fd;
+  --lt-cyan:        #0891b2;
+  --lt-cyan-pale:   #ecfeff;
+  --lt-cyan-bd:     #a5f3fc;
+  --lt-slate-50:    #f8fafc;
+  --lt-slate-100:   #f1f5f9;
+  --lt-slate-200:   #e2e8f0;
+  --lt-slate-500:   #64748b;
+  --lt-text:        #0f172a;
+  --lt-text-2:      #1e293b;
+  --lt-text-muted:  #64748b;
+  --lt-white:       #ffffff;
+  --lt-shadow-sm:   0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.04);
+  --lt-shadow:      0 4px 16px rgba(0,0,0,.08);
+  --lt-shadow-md:   0 8px 24px rgba(0,0,0,.10);
+  --lt-r:           12px;
+  --lt-r-sm:        8px;
+}
+
+/* ── Page Header ── */
+.lt-page-header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 16px; flex-wrap: wrap; margin-bottom: 28px;
+}
+.lt-page-title {
+  font-size: 22px; font-weight: 800; color: var(--lt-text);
+  letter-spacing: -.3px; font-family: 'Plus Jakarta Sans', sans-serif; line-height: 1.2;
+}
+.lt-page-subtitle {
+  font-size: 13px; color: var(--lt-text-muted); margin-top: 3px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* ── Stat Cards ── */
+.lt-stat-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 14px; margin-bottom: 28px;
+}
+.lt-stat-card {
+  background: var(--lt-white); border-radius: var(--lt-r);
+  border: 1px solid var(--lt-slate-200); padding: 18px 20px;
+  box-shadow: var(--lt-shadow-sm); position: relative; overflow: hidden;
+  transition: box-shadow .2s, transform .2s;
+}
+.lt-stat-card:hover { box-shadow: var(--lt-shadow); transform: translateY(-1px); }
+.lt-stat-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 3px; border-radius: 3px 3px 0 0;
+}
+.lt-stat-card.blue::before   { background: var(--lt-blue); }
+.lt-stat-card.green::before  { background: var(--lt-green); }
+.lt-stat-card.amber::before  { background: var(--lt-amber); }
+.lt-stat-card.red::before    { background: var(--lt-red); }
+.lt-stat-card.purple::before { background: var(--lt-purple); }
+.lt-stat-card.cyan::before   { background: var(--lt-cyan); }
+.lt-stat-card.slate::before  { background: var(--lt-slate-500); }
+.lt-stat-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .7px; color: var(--lt-text-muted); margin-bottom: 8px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.lt-stat-value {
+  font-size: 30px; font-weight: 800; color: var(--lt-text);
+  line-height: 1; font-variant-numeric: tabular-nums;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.lt-stat-sub { font-size: 12px; color: var(--lt-text-muted); margin-top: 5px; font-family: 'Plus Jakarta Sans', sans-serif; }
+
+/* ── Section Header ── */
+.lt-section-hd {
+  display: flex; align-items: center; justify-content: space-between;
+  margin: 24px 0 14px; gap: 12px; flex-wrap: wrap;
+}
+.lt-section-title {
+  font-size: 13.5px; font-weight: 700; color: var(--lt-text);
+  text-transform: uppercase; letter-spacing: .5px;
+  display: flex; align-items: center; gap: 8px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.lt-section-title::before {
+  content: ''; width: 3px; height: 16px; background: var(--lt-blue);
+  border-radius: 2px; display: inline-block;
+}
+
+/* ── Buttons ── */
+.lt-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 16px; border-radius: var(--lt-r-sm);
+  font-size: 13px; font-weight: 600; cursor: pointer;
+  border: none; transition: all .18s; line-height: 1;
+  font-family: 'Plus Jakarta Sans', sans-serif; white-space: nowrap;
+}
+.lt-btn-primary { background: var(--lt-blue);  color: #fff; }
+.lt-btn-primary:hover { background: var(--lt-blue-h); }
+.lt-btn-success { background: var(--lt-green); color: #fff; }
+.lt-btn-success:hover { background: #15803d; }
+.lt-btn-danger  { background: var(--lt-red);   color: #fff; }
+.lt-btn-danger:hover  { background: #b91c1c; }
+.lt-btn-amber   { background: var(--lt-amber); color: #fff; }
+.lt-btn-amber:hover   { background: #b45309; }
+.lt-btn-ghost   { background: var(--lt-slate-100); color: var(--lt-text-2); border: 1px solid var(--lt-slate-200); }
+.lt-btn-ghost:hover   { background: var(--lt-slate-200); }
+.lt-btn-outline { background: transparent; color: var(--lt-blue); border: 1.5px solid var(--lt-blue); }
+.lt-btn-outline:hover { background: var(--lt-blue-pale); }
+.lt-btn:disabled { opacity: .5; cursor: not-allowed; }
+.lt-btn-sm   { padding: 5px 12px; font-size: 12px; }
+.lt-btn-icon { width: 32px; height: 32px; padding: 0; justify-content: center; }
+
+/* ── Status Pills ── */
+.lt-sp {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 3px 10px; border-radius: 20px;
+  font-size: 10.5px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .4px; white-space: nowrap; line-height: 1.5;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.lt-sp-pending    { background: var(--lt-amber-pale);  color: var(--lt-amber);   border: 1px solid var(--lt-amber-bd); }
+.lt-sp-approved   { background: var(--lt-green-pale);  color: var(--lt-green);   border: 1px solid var(--lt-green-bd); }
+.lt-sp-rejected   { background: var(--lt-red-pale);    color: var(--lt-red);     border: 1px solid var(--lt-red-bd); }
+.lt-sp-processing { background: var(--lt-blue-pale);   color: var(--lt-blue);    border: 1px solid var(--lt-blue-bd); }
+.lt-sp-waiting    { background: var(--lt-purple-pale); color: var(--lt-purple);  border: 1px solid var(--lt-purple-bd); }
+.lt-sp-issued     { background: var(--lt-blue-pale);   color: var(--lt-blue);    border: 1px solid var(--lt-blue-bd); }
+.lt-sp-confirmed  { background: var(--lt-cyan-pale);   color: var(--lt-cyan);    border: 1px solid var(--lt-cyan-bd); }
+.lt-sp-returned   { background: var(--lt-amber-pale);  color: var(--lt-amber);   border: 1px solid var(--lt-amber-bd); }
+.lt-sp-damaged    { background: var(--lt-red-pale);    color: var(--lt-red);     border: 1px solid var(--lt-red-bd); }
+.lt-sp-slate      { background: var(--lt-slate-100);   color: var(--lt-slate-500); border: 1px solid var(--lt-slate-200); }
+
+/* ── Table ── */
+.lt-table-wrap {
+  background: var(--lt-white); border-radius: var(--lt-r);
+  border: 1px solid var(--lt-slate-200); box-shadow: var(--lt-shadow-sm);
+  overflow: hidden; margin-bottom: 20px;
+}
+.lt-table { width: 100%; border-collapse: separate; border-spacing: 0; }
+.lt-table thead th {
+  padding: 10px 14px; background: var(--lt-slate-50);
+  font-size: 10.5px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .6px; color: var(--lt-text-muted); text-align: left;
+  border-bottom: 1px solid var(--lt-slate-200); white-space: nowrap;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.lt-table tbody td {
+  padding: 12px 14px; font-size: 13px; color: var(--lt-text);
+  border-bottom: 1px solid var(--lt-slate-100); vertical-align: middle;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.lt-table tbody tr:last-child td { border-bottom: none; }
+.lt-table tbody tr:hover          { background: var(--lt-slate-50); }
+.lt-table .tc { text-align: center; }
+.lt-id   { font-weight: 700; color: var(--lt-blue); font-family: 'Plus Jakarta Sans', sans-serif; }
+.lt-muted { color: var(--lt-text-muted); font-size: 12px; }
+
+/* ── Alerts ── */
+.lt-alert {
+  padding: 11px 15px; border-radius: var(--lt-r-sm);
+  font-size: 13px; margin-bottom: 14px; font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.lt-alert-error   { background: var(--lt-red-pale);   color: var(--lt-red);   border: 1px solid var(--lt-red-bd); }
+.lt-alert-success { background: var(--lt-green-pale); color: var(--lt-green); border: 1px solid var(--lt-green-bd); }
+.lt-alert-info    { background: var(--lt-blue-pale);  color: #1d4ed8;         border: 1px solid var(--lt-blue-bd); }
+.lt-alert-amber   { background: var(--lt-amber-pale); color: #92400e;         border: 1px solid var(--lt-amber-bd); }
+
+/* ── Chart Cards ── */
+.lt-chart-card {
+  background: var(--lt-white); border-radius: var(--lt-r);
+  border: 1px solid var(--lt-slate-200); box-shadow: var(--lt-shadow-sm);
+  padding: 20px 20px 14px;
+}
+.lt-chart-title {
+  font-size: 12.5px; font-weight: 700; color: var(--lt-text);
+  margin-bottom: 14px; text-transform: uppercase; letter-spacing: .4px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.lt-chart-grid-2 {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px; margin-bottom: 20px;
+}
+
+/* ── Filter Bar ── */
+.lt-filter-bar { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
+.lt-filter-wrap { position: relative; flex: 1; min-width: 200px; }
+.lt-filter-icon {
+  position: absolute; left: 10px; top: 50%; transform: translateY(-50%);
+  color: var(--lt-text-muted); pointer-events: none;
+  display: flex; align-items: center;
+}
+.lt-filter-input {
+  width: 100%; padding: 9px 12px 9px 34px;
+  border: 1.5px solid var(--lt-slate-200); border-radius: var(--lt-r-sm);
+  font-size: 13px; color: var(--lt-text); background: var(--lt-white);
+  outline: none; transition: border-color .18s; font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.lt-filter-input:focus { border-color: var(--lt-blue); }
+.lt-filter-select {
+  padding: 9px 12px; border: 1.5px solid var(--lt-slate-200); border-radius: var(--lt-r-sm);
+  font-size: 13px; color: var(--lt-text); background: var(--lt-white);
+  outline: none; cursor: pointer; font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.lt-filter-select:focus { border-color: var(--lt-blue); }
+
+/* ── Quick Action Grid ── */
+.lt-qa-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px; margin-bottom: 28px;
+}
+.lt-qa-card {
+  background: var(--lt-white); border: 1px solid var(--lt-slate-200);
+  border-radius: var(--lt-r); padding: 16px 14px;
+  display: flex; flex-direction: column; align-items: center; gap: 9px;
+  cursor: pointer; transition: all .2s; box-shadow: var(--lt-shadow-sm);
+}
+.lt-qa-card:hover { box-shadow: var(--lt-shadow-md); transform: translateY(-2px); border-color: transparent; }
+.lt-qa-icon {
+  width: 42px; height: 42px; border-radius: 11px;
+  display: flex; align-items: center; justify-content: center; font-size: 19px;
+}
+.lt-qa-label {
+  font-size: 12px; font-weight: 700; color: var(--lt-text);
+  text-align: center; line-height: 1.3; font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.lt-qa-blue   .lt-qa-icon { background: #dbeafe; color: var(--lt-blue); }
+.lt-qa-green  .lt-qa-icon { background: #dcfce7; color: var(--lt-green); }
+.lt-qa-amber  .lt-qa-icon { background: #fef3c7; color: var(--lt-amber); }
+.lt-qa-purple .lt-qa-icon { background: #ede9fe; color: var(--lt-purple); }
+
+/* ── Application Cards (LecturerApplications) ── */
+.lt-app-card {
+  background: var(--lt-white); border: 1px solid var(--lt-slate-200);
+  border-radius: var(--lt-r); box-shadow: var(--lt-shadow-sm);
+  overflow: hidden; margin-bottom: 16px; transition: box-shadow .2s;
+}
+.lt-app-card:hover { box-shadow: var(--lt-shadow); }
+.lt-app-card-top {
+  padding: 14px 20px; background: var(--lt-slate-50);
+  border-bottom: 1px solid var(--lt-slate-100);
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; flex-wrap: wrap;
+}
+.lt-app-card-body { padding: 16px 20px; }
+
+/* ── Request Cards (LecturerViewRequests) ── */
+.lt-req-card {
+  background: var(--lt-white); border: 1px solid var(--lt-slate-200);
+  border-radius: var(--lt-r); box-shadow: var(--lt-shadow-sm);
+  overflow: hidden; margin-bottom: 16px; transition: box-shadow .2s;
+}
+.lt-req-card:hover { box-shadow: var(--lt-shadow); }
+.lt-req-card-top {
+  padding: 14px 20px; background: var(--lt-slate-50);
+  border-bottom: 1px solid var(--lt-slate-100);
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; flex-wrap: wrap;
+}
+.lt-req-card-body { padding: 16px 20px; }
+
+/* ── Meta Grid ── */
+.lt-meta-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px 20px; margin-bottom: 14px;
+}
+.lt-mi-label {
+  font-size: 10px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .6px; color: var(--lt-text-muted); margin-bottom: 2px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.lt-mi-value {
+  font-size: 13.5px; font-weight: 600; color: var(--lt-text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.lt-mi-value.muted { font-weight: 400; color: var(--lt-text-muted); }
+
+/* ── Reject Panel (LecturerApplications) ── */
+.lt-reject-panel {
+  margin-top: 12px; padding: 12px 14px;
+  background: var(--lt-red-pale); border: 1px solid var(--lt-red-bd);
+  border-radius: var(--lt-r-sm);
+  display: flex; gap: 8px; flex-wrap: wrap; align-items: center;
+}
+.lt-reject-input {
+  flex: 1; min-width: 180px;
+  padding: 8px 12px; border: 1.5px solid var(--lt-red-bd);
+  border-radius: var(--lt-r-sm); font-size: 13px; color: var(--lt-text);
+  background: var(--lt-white); outline: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.lt-reject-input:focus { border-color: var(--lt-red); }
+
+/* ── Form Elements (LecturerNewRequest) ── */
+.lt-form-grid   { display: grid; gap: 14px; }
+.lt-form-grid-2 { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+.lt-form-group  { display: flex; flex-direction: column; gap: 4px; }
+.lt-label {
+  font-size: 11.5px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .5px; color: var(--lt-text-muted); margin-bottom: 4px;
+  display: block; font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.lt-req { color: var(--lt-red); margin-left: 2px; }
+.lt-input {
+  width: 100%; padding: 9px 12px;
+  border: 1.5px solid var(--lt-slate-200); border-radius: var(--lt-r-sm);
+  font-size: 13px; color: var(--lt-text); background: var(--lt-white);
+  outline: none; transition: border-color .18s; font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.lt-input:focus    { border-color: var(--lt-blue); }
+.lt-input:disabled { background: var(--lt-slate-100); color: var(--lt-text-muted); cursor: not-allowed; }
+.lt-select {
+  width: 100%; padding: 9px 12px;
+  border: 1.5px solid var(--lt-slate-200); border-radius: var(--lt-r-sm);
+  font-size: 13px; color: var(--lt-text); background: var(--lt-white);
+  outline: none; cursor: pointer; font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.lt-select:focus    { border-color: var(--lt-blue); }
+.lt-select:disabled { background: var(--lt-slate-100); color: var(--lt-text-muted); cursor: not-allowed; }
+.lt-textarea {
+  width: 100%; padding: 9px 12px;
+  border: 1.5px solid var(--lt-slate-200); border-radius: var(--lt-r-sm);
+  font-size: 13px; color: var(--lt-text); background: var(--lt-white);
+  outline: none; transition: border-color .18s; font-family: 'Plus Jakarta Sans', sans-serif;
+  resize: vertical; min-height: 80px;
+}
+.lt-textarea:focus { border-color: var(--lt-blue); }
+
+/* ── Item List (LecturerNewRequest) ── */
+.lt-item-list { border: 1px solid var(--lt-slate-200); border-radius: var(--lt-r-sm); overflow: hidden; }
+.lt-item-list-hd {
+  padding: 9px 14px; background: var(--lt-slate-50);
+  font-size: 11.5px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .5px; color: var(--lt-text-muted);
+  border-bottom: 1px solid var(--lt-slate-200); font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.lt-item-empty {
+  padding: 24px 14px; text-align: center;
+  font-size: 13px; color: var(--lt-text-muted); font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.lt-item-row {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; padding: 12px 14px; background: var(--lt-white);
+  border-bottom: 1px solid var(--lt-slate-100); transition: background .15s;
+}
+.lt-item-row:last-child { border-bottom: none; }
+.lt-item-row:hover      { background: var(--lt-slate-50); }
+.lt-item-name { font-size: 13.5px; font-weight: 700; color: var(--lt-text); font-family: 'Plus Jakarta Sans', sans-serif; }
+.lt-item-meta { font-size: 12px; color: var(--lt-text-muted); margin-top: 2px; font-family: 'Plus Jakarta Sans', sans-serif; }
+
+/* ── Empty State ── */
+.lt-empty { padding: 50px 20px; text-align: center; }
+.lt-empty-icon { font-size: 36px; opacity: .35; margin-bottom: 10px; }
+.lt-empty-text { font-size: 13.5px; color: var(--lt-text-muted); font-family: 'Plus Jakarta Sans', sans-serif; }
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .lt-stat-grid    { grid-template-columns: repeat(2, 1fr); }
+  .lt-qa-grid      { grid-template-columns: repeat(2, 1fr); }
+  .lt-chart-grid-2 { grid-template-columns: 1fr; }
+  .lt-meta-grid    { grid-template-columns: 1fr 1fr; }
+  .lt-form-grid-2  { grid-template-columns: 1fr; }
+  .lt-page-header  { flex-direction: column; }
+}
+/* ================================================================
+   WELCOME BANNER — added for Lecturer dashboard
+   ================================================================ */
+.lt-welcome-banner {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 55%, #1a1a3e 100%);
+  border-radius: var(--lt-r, 12px);
+  padding: 22px 28px;
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.lt-welcome-banner::before {
+  content: '';
+  position: absolute; top: -40px; right: -40px;
+  width: 180px; height: 180px; border-radius: 50%;
+  background: rgba(37, 99, 235, 0.20);
+}
+.lt-welcome-banner::after {
+  content: '';
+  position: absolute; bottom: -20px; right: 100px;
+  width: 110px; height: 110px; border-radius: 50%;
+  background: rgba(37, 99, 235, 0.10);
+}
+.lt-welcome-name {
+  font-size: 20px; font-weight: 800; color: #ffffff;
+  margin-bottom: 4px; position: relative; z-index: 1;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+.lt-welcome-sub {
+  font-size: 13px; color: rgba(255,255,255,0.65); font-weight: 400;
+  position: relative; z-index: 1;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+.lt-welcome-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: rgba(37, 99, 235, 0.30); color: #bfdbfe;
+  border: 1px solid rgba(191, 219, 254, 0.40); border-radius: 20px;
+  padding: 3px 10px; font-size: 11px; font-weight: 700;
+  margin-top: 8px; position: relative; z-index: 1;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}

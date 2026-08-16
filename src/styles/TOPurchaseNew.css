@@ -1,0 +1,161 @@
+.content {
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  background: #f9fafb;
+}
+
+/* Form title */
+.form-title {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* Messages */
+.form-message {
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+.form-message.error { background: #fee2e2; color: #b91c1c; }
+.form-message.success { background: #d1fae5; color: #065f46; }
+
+/* Card container for the form */
+.form-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Form row layout */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+/* Form groups for inputs/selects */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 180px;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #374151;
+}
+
+/* Inputs & selects same height */
+select, input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 0.95rem;
+  height: 40px; /* uniform height */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Add button styling aligned with selects */
+.form-group.add-btn {
+  flex: 0 0 auto;
+}
+.form-group.add-btn .btn-primary {
+  height: 40px; /* match select/input height */
+  padding: 0 16px;
+  font-size: 0.95rem;
+}
+
+/* Primary button */
+.btn-primary {
+  background-color: #1d4ed8; /* sidebar color */
+  color: #fff;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+.btn-primary:hover { background-color: #2563eb; }
+
+/* Items section */
+.items-title { margin-bottom: 10px; font-weight: 600; color: #111827; }
+
+.no-items {
+  padding: 12px;
+  background: #f3f4f6;
+  border-radius: 8px;
+  text-align: center;
+  color: #6b7280;
+}
+
+.items-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+  max-width: 480px;
+}
+
+.item-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  font-size: 0.95rem;
+  color: #111827;
+}
+
+.item-row .item-name {
+  flex: 1;
+}
+
+.btn-cancel {
+  background: #dc2626;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  width: auto;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.btn-cancel:hover {
+  background: #b91c1c;
+}
+
+/* Submit button aligned left */
+.submit-row {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 12px;
+}
+
+.submit-row .btn-primary {
+  width: auto;
+  padding: 6px 16px;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  background-color: #1d4ed8; /* sidebar color */
+  color: #fff;
+}
+
+.submit-row .btn-primary:hover {
+  background-color: #2563eb;
+}
