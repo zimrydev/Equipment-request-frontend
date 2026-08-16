@@ -7,29 +7,29 @@ A role-based web application developed as a university group project to manage e
 
 ## Technologies
 
-React.js
+* React.js
 
-JavaScript (ES6+)
+* JavaScript (ES6+)
 
-JSX
+* JSX
 
-HTML5
+* HTML5
 
-CSS3
+* CSS3
 
-React Router
+* React Router
 
-React Context API
+* React Context API
 
-Fetch API / REST API integration
+* Fetch API / REST API integration
 
-React Icons
+* React Icons
 
-Recharts
+* Recharts
 
-Browser Local Storage
+* Browser Local Storage
 
-JWT token handling on the frontend
+* JWT token handling on the frontend
 
 The backend was developed by another team member using Java/Spring Boot. This repository documents my frontend contribution and the frontend's integration with the team's REST APIs.
 
@@ -122,14 +122,22 @@ Signup overlay
 ## Frontend Architecture
 
 src/
-├── api/              # REST API client functions
-├── components/       # Reusable React components
-├── context/          # Shared application state
-├── pages/            # Role-specific pages and workflows
+├── api/               # REST API client functions
+
+├── components/        # Reusable React components
+
+├── context/           # Shared application state
+
+├── pages/             # Role-specific pages and workflows
+
 ├── styles/            # Page and role-specific CSS
+
 ├── utils/             # Reporting/PDF utilities
+
 ├── App.jsx            # Application routes
+
 ├── main.jsx           # React entry point
+
 └── index.css          # Global styles
 
 ## API Integration
